@@ -1,0 +1,52 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>DevExtreme</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/png" href="favicon.png">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <script type="text/javascript" src="./js/jquery.min.js"></script>
+ 
+  <!-- DevExtreme theme -->
+  <link rel="stylesheet" href="./css/dx.light.css">
+
+  <!-- DevExtreme library -->
+  <script type="text/javascript" src="./js/dx.all.js"></script>
+<style>
+    html,body{
+        height: 100%;
+        margin:0;
+        padding: 0;
+    }
+</style>
+</head>
+<body class="dx-viewport">
+  
+    <div id="boxContainer">
+        <div class="box-item" data-options="dxItem: { ratio: 1 }" style="background-color: brown;">Header</div>
+        <div class="box-item" data-options="dxItem: {  ratio: 8 }" style="background-color: yellow;">
+            <div id="buttonContainer"></div>
+        </div>
+        <div class="box-item" data-options="dxItem: {  ratio: 1 }" style="background-color: red;">Footer</div>
+    </div>
+
+    
+    <script type="text/javascript">
+        $(function() {
+            $("#boxContainer").dxBox({
+                direction: "col",
+                height: '100%'
+            });
+
+            $("#buttonContainer").dxButton({
+                text: "Click me!",
+                onClick: function () {
+                    alert("Hello world!");
+                }
+            });
+        });
+    </script>
+</body>
+</html>
